@@ -3,7 +3,7 @@ name: containerfile-image-names
 description: Review Containerfile or Dockerfile FROM instructions for image names without an explicit registry. Use when asked to check base-image names or short-name resolution in a container build file.
 license: Apache-2.0
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # Review Containerfile image names
@@ -25,3 +25,5 @@ build. For each FROM instruction, identify its image operand after any flags.
   registry is intended rather than automatically inserting docker.io.
 
 If no short or unresolved external references remain, state that explicitly.
+Finish with counts of short names and unresolved references, keeping the two
+categories separate so an unknown build argument is not reported as a defect.
